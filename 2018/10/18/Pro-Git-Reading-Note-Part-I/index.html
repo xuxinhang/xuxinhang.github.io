@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Pro Git Reading Note Part I | 小牛写代码的地方</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="git remote show 为这种情况下的合并操作没有需要解决的分歧——这就叫做 “快进（fast-forward）” Git 自动将 serverfix 分支名字展开为refs&#x2F;heads&#x2F;serverfix:refs&#x2F;heads&#x2F;serverfix，那意味着，“推送本地的 serverfix 分支来更新远程仓库上的 serverfix 分支。” 我们将会详细学习 Git 内部原理 的 r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pro Git Reading Note Part I">
+<meta property="og:url" content="http://example.com/2018/10/18/Pro-Git-Reading-Note-Part-I/index.html">
+<meta property="og:site_name" content="小牛写代码的地方">
+<meta property="og:description" content="git remote show 为这种情况下的合并操作没有需要解决的分歧——这就叫做 “快进（fast-forward）” Git 自动将 serverfix 分支名字展开为refs&#x2F;heads&#x2F;serverfix:refs&#x2F;heads&#x2F;serverfix，那意味着，“推送本地的 serverfix 分支来更新远程仓库上的 serverfix 分支。” 我们将会详细学习 Git 内部原理 的 r">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-10-18T05:13:12.000Z">
+<meta property="article:modified_time" content="2021-03-03T05:54:01.725Z">
+<meta property="article:author" content="Cattle">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="小牛写代码的地方" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小牛写代码的地方</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Code is Poetry</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Pro-Git-Reading-Note-Part-I" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/10/18/Pro-Git-Reading-Note-Part-I/" class="article-date">
+  <time class="dt-published" datetime="2018-10-18T05:13:12.000Z" itemprop="datePublished">2018-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Pro Git Reading Note Part I
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <!-- <div class="ql-editor" data-gramm="false" contenteditable="true">  -->
+<p><code>git remote show</code></p>
+<p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">为这种情况下的合并操作没有需要解决的分歧——这就叫做 “快进（fast-forward）”</span></p>
+<p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">Git 自动将 </span><code>serverfix</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 分支名字展开为</span><code>refs/heads/serverfix:refs/heads/serverfix</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">，那意味着，“推送本地的 serverfix 分支来更新远程仓库上的 serverfix 分支。” 我们将会详细学习 </span><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/ch00/ch10-git-internals">Git 内部原理</a><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 的 </span><code>refs/heads/</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 部分，但是现在可以先把它放在儿。 你也可以运行 </span><code>gi</code></p>
+<h1 id="3-5-Git-分支-远程分支"><a href="#3-5-Git-分支-远程分支" class="headerlink" title="3.5 Git 分支 - 远程分支"></a>3.5 Git 分支 - 远程分支</h1><h3 id="跟踪分支"><a href="#跟踪分支" class="headerlink" title="跟踪分支"></a><strong>跟踪分支</strong></h3><p>从一个远程跟踪分支检出一个本地分支会自动创建一个叫做 “跟踪分支”（有时候也叫做 “上游分支”）。 跟踪分支是与远程分支有直接关系的本地分支。 如果在一个跟踪分支上输入 <code>git pull</code>，Git 能自动地识别去哪个服务器上抓取、合并到哪个分支。</p>
+<p>当克隆一个仓库时，它通常会自动地创建一个跟踪 origin/master 的 master 分支。 然而，如果你愿意的话可以设置其他的跟踪分支 - 其他远程仓库上的跟踪分支，或者不跟踪 master 分支。 最简单的就是之前看到的例子，运行 git checkout -b [branch] [remotename]/[branch]。 这是一个十分常用的操作所以 Git 提供了 –track 快捷方式：</p>
+<pre spellcheck="false">$ git checkout --track origin/serverfix       
+</pre>
+
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF">https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF</a></p>
+<p>clone下来的repo在本地默认只有master分支。</p>
+<p>上游快捷方式</p>
+<p><span style="background-color: rgb(255, 242, 133);">当设置好跟踪分支后，可以通过 </span><code>@&#123;upstream&#125;</code><span style="background-color: rgb(255, 242, 133);"> 或 </span><code>@&#123;u&#125;</code><span style="background-color: rgb(255, 242, 133);"> 快捷方式来引用它</span>。 所以在 <code>master</code> 分支时并且它正在跟踪 <code>origin/master</code> 时，如果愿意的话可以使用 <code>git merge @&#123;u&#125;</code> 来取代 <code>git merge origin/master</code>。</p>
+<h3 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a><strong>删除远程分支</strong></h3><pre spellcheck="false">git push origin --delete serverfix          
+</pre>
+
+<h1 id="3-6-Git-分支-变基"><a href="#3-6-Git-分支-变基" class="headerlink" title="3.6 Git 分支 - 变基"></a>3.6 Git 分支 - 变基</h1><pre spellcheck="false"> git rebase --onto master server client          
+</pre>
+
+<ul>
+<li><span style="background-color: rgb(255, 242, 133);">如果不加 onto 会发生什么？</span></li>
+<li>好好研究一下 rebase 的 options</li>
+</ul>
+<pre spellcheck="false">git rebase [-i | --interactive] [&lt;options&gt;] [--exec &lt;cmd&gt;] [--onto &lt;newbase&gt;]  [&lt;upstream&gt; [&lt;branch&gt;]] git rebase [-i | --interactive] [&lt;options&gt;] [--exec &lt;cmd&gt;] [--onto &lt;newbase&gt;]  --root [&lt;branch&gt;] git rebase --continue | --skip | --abort | --quit | --edit-todo | --show-current-patch          
+</pre>
+
+<h3 id="用变基解决变基"><a href="#用变基解决变基" class="headerlink" title="用变基解决变基"></a><strong>用变基解决变基</strong></h3><p>如果你 <strong>真的</strong> 遭遇了类似的处境，Git 还有一些高级魔法可以帮到你。 如果团队中的某人强制推送并覆盖了一些你所基于的提交，你需要做的就是检查你做了哪些修改，以及他们覆盖了哪些修改。<span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">如果你或你的同事在某些情形下决意要这么做，请一定要通知每个人执行 </span><code>git pull --rebase</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> </span><em>总的原则是，只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作，这样，你才能享受到两种方式带来的便利</em><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">。</span></p>
+<h1 id="4-1-服务器上的-Git-协议"><a href="#4-1-服务器上的-Git-协议" class="headerlink" title="4.1 服务器上的 Git - 协议"></a>4.1 服务器上的 Git - 协议</h1><p>HTTPS 如何指定证书？</p>
+<p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">裸仓库目录名以 .git 结尾</span></p>
+<h1 id="5-2-分布式-Git-向一个项目贡献"><a href="#5-2-分布式-Git-向一个项目贡献" class="headerlink" title="5.2 分布式 Git - 向一个项目贡献"></a>5.2 分布式 Git - 向一个项目贡献</h1><p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">运行 </span><code>git diff --check</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">，它将会找到可能的空白错误并将它们为你列出来</span></p>
+<h1 id="7-1-Git-工具-选择修订版本"><a href="#7-1-Git-工具-选择修订版本" class="headerlink" title="7.1 Git 工具 - 选择修订版本"></a>7.1 Git 工具 - 选择修订版本</h1><p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">值得注意的是，引用日志只存在于本地仓库，一个记录你在你自己的仓库里做过什么的日志。 其他人拷贝的仓库里的引用日志不会和你的相同；而你新克隆一个仓库的时候，引用日志是空的，因为你在仓库里还没有操作。</span></p>
+<ul>
+<li>SHA-1</li>
+<li><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);">当然你提供的 SHA-1 字符数量不得少于 4 个，并且没有歧义</span></li>
+<li>分支引用</li>
+<li>引用日志(reflog)：<code>HEAD@&#123;5&#125;</code>  <code>master@&#123;yesterday&#125;</code></li>
+<li><code>git reflog</code> 来查看日志</li>
+<li>祖先引用： <code>HEAD^</code>     <code>HEAD^2</code>   第二父提交</li>
+<li><code>HEAD~2</code>  第一父提交的第一父提交 = <code>HEAD^^</code></li>
+<li><code>^2</code> 与 <code>~2</code> 的区别 </li>
+<li>提交区间</li>
+<li><code>master..experiment</code>   experiment 分支中未在 master 分支（哪些提交尚未被合并入 master 分支</li>
+<li><code>master...experiment</code> 如果你想看 <code>master</code> 或者 <code>experiment</code> 中包含的但不是两者共有的提交</li>
+</ul>
+<p>因此下列3个命令是等价的：</p>
+<pre spellcheck="false">$ git log refA..refB $ git log ^refA refB $ git log refB --not refA      
+</pre>
+
+<p>你想查看所有被 <code>refA</code> 或 <code>refB</code> 包含的但是不被 <code>refC</code> 包含的提交</p>
+<pre spellcheck="false">$ git log refA refB ^refC $ git log refA refB --not refC      
+</pre>
+
+<p>另一个常用的场景是查看你即将推送到远端的内容：</p>
+<pre spellcheck="false">$ git log origin/master..HEAD          
+</pre>
+
+<p>这个命令会输出在你当前分支中而不在远程 <code>origin</code> 中的提交。</p>
+<h1 id="7-2-Git-工具-交互式暂存"><a href="#7-2-Git-工具-交互式暂存" class="headerlink" title="7.2 Git 工具 - 交互式暂存"></a>7.2 Git 工具 - 交互式暂存</h1><p><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);">运行 </span><code>git add</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 时使用 </span><code>-i</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 或者 </span><code>--interactive</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 选项，Git 将会进入一个交互式终端模式</span></p>
+<p>可以在命令行中使用 <code>git add -p</code> 或 <code>git add --patch</code>来启动同样的脚本。</p>
+<p>更进一步地，可以使用 <code>reset --patch</code> 命令的补丁模式来部分重置文件，通过 <code>checkout --patch</code> 命令来部分检出文件与 <code>stash save --patch</code> 命令来部分暂存文件。</p>
+<p><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);">默认情况下，</span><code>git clean</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 命令只会移除没有忽略的未跟踪文件。 任何与 </span><code>.gitiignore</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 或其他忽略文件中的模式匹配的文件都不会被移除。 </span></p>
+<p><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);">现在运行 </span><code>git status</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 会没有输出，因为三棵树又变得相同了。</span></p>
+<p><code>reset</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 做的第一件事是移动 HEAD 的指向。 这与改变 HEAD 自身不同（</span><code>checkout</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 所做的）；</span><code>reset</code><span style="color: rgb(78, 68, 60); background-color: rgb(252, 252, 250);"> 移动 HEAD 指向的分支。</span></p>
+<h1 id="7-7-Git-工具-重置揭密-TODO"><a href="#7-7-Git-工具-重置揭密-TODO" class="headerlink" title="7.7 Git 工具 - 重置揭密 [TODO]"></a>7.7 Git 工具 - 重置揭密 [TODO]</h1><p>值得好好看一下</p>
+<h1 id="7-3-Git-工具-储藏与清理"><a href="#7-3-Git-工具-储藏与清理" class="headerlink" title="7.3 Git 工具 - 储藏与清理"></a>7.3 Git 工具 - 储藏与清理</h1><ul>
+<li>文中出现的 <code>git stash</code> 的各种参数和用法</li>
+</ul>
+<p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">因为它被设计为从工作目录中移除未被追踪的文件。 如果你改变主意了，你也不一定能找回来那些文件的内容。 一个更安全的选项是运行 </span><code>git stash --all</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 来移除每一样东西并存放在栈中。</span></p>
+<p><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">默认情况下，</span><code>git clean</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 命令</span><strong>只会移除没有忽略的未跟踪文件</strong><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">。</span><strong> **</strong>任何与 <strong>`</strong>.gitiignore<strong>`</strong> 或其他忽略文件中的模式匹配的文件都不会被移除**<span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);">。 如果你也想要移除那些文件，可以给 clean 命令增加一个 </span><code>-x</code><span style="background-color: rgb(252, 252, 250); color: rgb(78, 68, 60);"> 选项。</span></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/10/18/Pro-Git-Reading-Note-Part-I/" data-id="cklt0yx5g0002h4ssh7aph8q7" data-title="Pro Git Reading Note Part I" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/18/Pro-Git-Reading-Note-Part-II/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Pro Git Reading Note Part II
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/17/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%EF%BC%9F%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9E%8B%EF%BC%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">管理系统的登录控制？手写一个发布订阅模型！</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/" rel="tag">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/" rel="tag">HTTPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blend-mode/" rel="tag">blend mode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mask/" rel="tag">mask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag">密码学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%95%82%E7%A9%BA/" rel="tag">镂空</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Context/" style="font-size: 10px;">Context</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/blend-mode/" style="font-size: 10px;">blend mode</a> <a href="/tags/mask/" style="font-size: 10px;">mask</a> <a href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" style="font-size: 10px;">发布订阅</a> <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 10px;">密码学</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发工具</a> <a href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%95%82%E7%A9%BA/" style="font-size: 10px;">镂空</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/">用纯 CSS 实现镂空效果</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/11/%E5%89%96%E6%9E%90-HTTPS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/">剖析 HTTPS 的设计思路</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/18/Pro-Git-Reading-Note-Part-II/">Pro Git Reading Note Part II</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/18/Pro-Git-Reading-Note-Part-I/">Pro Git Reading Note Part I</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Cattle<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
