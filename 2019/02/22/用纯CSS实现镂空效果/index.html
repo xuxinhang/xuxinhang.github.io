@@ -6,21 +6,21 @@
   
   <title>用纯 CSS 实现镂空效果 | 小牛写代码的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="UPDATE 2&#x2F;26 现在为示例 CodePen 添加了厂商前缀，并在正文中添加了兼容性提示。感谢评论区的各位。  近来研究了一下镂空效果。  background-clip: text背景被裁剪为文字的前景色。第一次是在 CSS-Tricks 看到的这个用法: 在 CSS-Tricks 网站上，这个玩意用得到处都是。 这样，做简单的图片背景镂空效果便不再困难了。关键代码只有几行。 12345">
+  <meta name="description" content="UPDATE 2&#x2F;26 现在为示例 CodePen 添加了厂商前缀，并在正文中添加了兼容性提示。感谢评论区的各位。  近来研究了一下镂空效果。   background-clip: text背景被裁剪为文字的前景色。第一次是在 CSS-Tricks 看到的这个用法: 在 CSS-Tricks 网站上，这个玩意用得到处都是。 这样，做简单的图片背景镂空效果便不再困难了。关键代码只有几行。 1234">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用纯 CSS 实现镂空效果">
 <meta property="og:url" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/index.html">
 <meta property="og:site_name" content="小牛写代码的地方">
-<meta property="og:description" content="UPDATE 2&#x2F;26 现在为示例 CodePen 添加了厂商前缀，并在正文中添加了兼容性提示。感谢评论区的各位。  近来研究了一下镂空效果。  background-clip: text背景被裁剪为文字的前景色。第一次是在 CSS-Tricks 看到的这个用法: 在 CSS-Tricks 网站上，这个玩意用得到处都是。 这样，做简单的图片背景镂空效果便不再困难了。关键代码只有几行。 12345">
+<meta property="og:description" content="UPDATE 2&#x2F;26 现在为示例 CodePen 添加了厂商前缀，并在正文中添加了兼容性提示。感谢评论区的各位。  近来研究了一下镂空效果。   background-clip: text背景被裁剪为文字的前景色。第一次是在 CSS-Tricks 看到的这个用法: 在 CSS-Tricks 网站上，这个玩意用得到处都是。 这样，做简单的图片背景镂空效果便不再困难了。关键代码只有几行。 1234">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915c2a03989856?w=835&amp;h=277&amp;f=png&amp;s=237345">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915c7824565c9e?w=199&amp;h=191&amp;f=png&amp;s=6203">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915c51b6c3daab?w=183&amp;h=200&amp;f=png&amp;s=6726">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915cc34f589f22?w=912&amp;h=114&amp;f=png&amp;s=15270">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915a8b25d771d1?w=640&amp;h=360&amp;f=png&amp;s=170232">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915ae4bf83ad55?w=640&amp;h=362&amp;f=png&amp;s=215599">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c2a03989856.png">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c7824565c9e.png">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c51b6c3daab.png">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915cc34f589f22.png">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915a8b25d771d1.png">
+<meta property="og:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915ae4bf83ad55.png">
 <meta property="article:published_time" content="2019-02-22T15:20:51.000Z">
-<meta property="article:modified_time" content="2021-03-03T05:54:01.725Z">
+<meta property="article:modified_time" content="2021-03-13T13:53:01.028Z">
 <meta property="article:author" content="Cattle">
 <meta property="article:tag" content="CSS">
 <meta property="article:tag" content="mask">
@@ -28,7 +28,7 @@
 <meta property="article:tag" content="blend mode">
 <meta property="article:tag" content="镂空">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/2/22/16915c2a03989856?w=835&amp;h=277&amp;f=png&amp;s=237345">
+<meta name="twitter:image" content="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c2a03989856.png">
   
     <link rel="alternate" href="/atom.xml" title="小牛写代码的地方" type="application/atom+xml">
   
@@ -117,17 +117,19 @@
 </blockquote>
 <p>近来研究了一下镂空效果。</p>
 <!--`https://github.githubassets.com/pinned-octocat.svg`-->
+
 <h1 id="background-clip-text"><a href="#background-clip-text" class="headerlink" title="background-clip: text"></a><code>background-clip: text</code></h1><p>背景被裁剪为文字的前景色。第一次是在 CSS-Tricks 看到的这个用法: 在 CSS-Tricks 网站上，这个玩意用得到处都是。</p>
 <p>这样，做简单的图片背景镂空效果便不再困难了。关键代码只有几行。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;/path/to/your/image&quot;</span>);</span><br><span class="line">  -webkit-<span class="attribute">background-clip</span>: text;  <span class="comment">/* Chrome 用户注意加 -webkit 前缀 */</span></span><br><span class="line">  <span class="attribute">background-clip</span>: text;</span><br><span class="line">  <span class="attribute">color</span>: transparent;             <span class="comment">/* 文字设为透明 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>就这几行，视觉上会就会有大变化。<a target="_blank" rel="noopener" href="https://codepen.io/xuxinhang/pen/ZwdxgW">前后对比</a>：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915c2a03989856?w=835&amp;h=277&amp;f=png&amp;s=237345" alt=""></p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c2a03989856.png"></p>
 <blockquote>
 <p>另外，<a target="_blank" rel="noopener" href="https://codepen.io/xuxinhang/pen/wNGwYo">这里</a>有个比上面更实用的 Demo</p>
 </blockquote>
 <blockquote>
 <p><strong>兼容性提示</strong></p>
-<p>除了 Firefox 和 Edge ，其它浏览器需要配合厂商前缀：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-<span class="attribute">background-clip</span>: text;</span><br></pre></td></tr></table></figure></p>
+<p>除了 Firefox 和 Edge ，其它浏览器需要配合厂商前缀：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-<span class="attribute">background-clip</span>: text;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p><code>background-clip</code> 既然是“background”家族的，那它天生和图片、渐变打的交道多。不过，我们做镂空总不会都是图片、渐变这种吧。如果我们想做视频、文字，甚至更复杂的 DOM 元素的镂空效果呢？</p>
 <h1 id="单刀直入：-CSS-mask-属性"><a href="#单刀直入：-CSS-mask-属性" class="headerlink" title="单刀直入： CSS mask 属性"></a>单刀直入： CSS <code>mask</code> 属性</h1><p>这应该是最直接能想到的方法了。毕竟名字里就带个“mask”，谁能忽略呢？</p>
@@ -136,7 +138,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;masked&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.masked</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(red, orange, yellow, lightgreen, blue, purple, red);</span><br><span class="line">  -webkit-<span class="attribute">mask</span>: <span class="built_in">url</span>(<span class="string">&quot;https://github.githubassets.com/pinned-octocat.svg&quot;</span>);</span><br><span class="line">  <span class="attribute">mask</span>: <span class="built_in">url</span>(<span class="string">&quot;https://github.githubassets.com/pinned-octocat.svg&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>就是下面的效果啦。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915c7824565c9e?w=199&amp;h=191&amp;f=png&amp;s=6203" alt=""></p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c7824565c9e.png"></p>
 <p>上面的用法还是很简单的，我们指定了一个 <code>mask</code> 参数，它的值是一张<s>从GitHub盗的</s>SVG图片。于是多彩的渐变就被<s>裁剪</s>遮罩成了那只著名的猫。</p>
 <blockquote>
 <p> <strong>兼容性提示</strong></p>
@@ -155,8 +157,9 @@ mask-size
 mask-type
 mask-composite
 mask-mode
-</code></pre><p>有没有 <code>background-*</code> 的即视感？没错，里面的不少属性都是和 backgorund / border 一致的，而且它们的作用也是一致的，只不过 <code>background-*</code> 用在背景上，而 <code>mask-*</code> 用在遮罩层上而已——用在背景上的奇技淫巧搬到 mask 的世界里还能接着用！比如实现这样的效果：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915c51b6c3daab?w=183&amp;h=200&amp;f=png&amp;s=6726" alt=""></p>
+</code></pre>
+<p>有没有 <code>background-*</code> 的即视感？没错，里面的不少属性都是和 backgorund / border 一致的，而且它们的作用也是一致的，只不过 <code>background-*</code> 用在背景上，而 <code>mask-*</code> 用在遮罩层上而已——用在背景上的奇技淫巧搬到 mask 的世界里还能接着用！比如实现这样的效果：</p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915c51b6c3daab.png"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.masked</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: /* ... */;</span><br><span class="line">  <span class="attribute">width</span>: /* ... */;</span><br><span class="line">  <span class="attribute">background</span>: /* ... */;</span><br><span class="line">  <span class="comment">/* Webkit 内核用户请注意添加厂商前缀 -webkit */</span></span><br><span class="line">  <span class="attribute">mask</span>-image: <span class="built_in">url</span>(<span class="string">https://github.githubassets.com/pinned-octocat.svg</span>);</span><br><span class="line">  <span class="attribute">mask</span>-size: <span class="number">5em</span>;</span><br><span class="line">  <span class="attribute">mask</span>-<span class="attribute">position</span>: center;</span><br><span class="line">  <span class="comment">/* 如果你心情好，加个动画也没问题的 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="进一步控制遮罩效果"><a href="#进一步控制遮罩效果" class="headerlink" title="进一步控制遮罩效果"></a>进一步控制遮罩效果</h2><p>可能读者已经发现了，<code>mask-*</code> 家族里有几张生面孔。这也好理解： mask 这么强大的特性，完完全全地抄 <code>background-*</code> 岂不可惜了。</p>
 <h3 id="mask-mode"><a href="#mask-mode" class="headerlink" title="mask-mode"></a><code>mask-mode</code></h3><p>mask-mode 用来指定具体的遮罩方式。</p>
@@ -167,7 +170,7 @@ mask-mode
 <p>那，遮罩值 / mask value 又是什么？mask value 表示被遮罩的元素被遮罩的程度。mask value 越大，被遮罩区域会更偏向于显露，mask value 最大的时候，那个区域就完全不透明了。举个例子：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;mode&quot;</span>&gt;</span>ABCDEFG<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mode</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="comment">/* and more */</span></span><br><span class="line">  <span class="attribute">mask</span>-image: <span class="built_in">linear-gradient</span>(to left, black, yellow);</span><br><span class="line">  <span class="attribute">mask</span>-mode: luminance; <span class="comment">/* or alaph ? */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915cc34f589f22?w=912&amp;h=114&amp;f=png&amp;s=15270" alt=""></p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915cc34f589f22.png"></p>
 <p>左边是遮罩图片，中间是 <code>luminance</code> 右边使用 <code>alaph</code>。这里的图片是不透明的，所以将一个恒不透明的图片在<code>alaph</code>模式下作为遮罩，其结果是没有遮罩效果。但是图片是有亮度变化的，所以<code>luminance</code>下的被遮罩元素就呈现出透明度的变化了。 </p>
 <p>一般 <code>luminance</code> 模式慢一点点，因为每一个像素点的亮度值需要根据 RGB 三个通道的值计算出来。</p>
 <h3 id="mask-composite"><a href="#mask-composite" class="headerlink" title="mask-composite"></a><code>mask-composite</code></h3><p>指定当有多个遮罩图片叠加起来的时候，如何处理遮罩效果。一些属性值的效果依赖于 mask-image 的层级次序。</p>
@@ -180,11 +183,11 @@ mask-mode
 <p>这里我们只讨论实现镂空效果用到的混合模式 —— <code>screen</code>。这种混合模式有一个特性，前景层是黑色导致最终可见的颜色直接是背景层的颜色，前景层是白色导致最终可见的颜色直接是白色。</p>
 <p>相信你已经搞不明白这和镂空有什么关系了，下面举个例子看一下。</p>
 <p>现在，我们有一个<code>&lt;video&gt;</code>，以及一个“白底黑字”的Logo浮层。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915a8b25d771d1?w=640&amp;h=360&amp;f=png&amp;s=170232" alt=""></p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915a8b25d771d1.png"></p>
 <p>我们在浮层框上加上下面的 CSS：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.logo</span> &#123;</span><br><span class="line">    <span class="comment">/* ... ... */</span></span><br><span class="line">    mix-blend-mode: screen;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>就变成了下面的样子：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/2/22/16915ae4bf83ad55?w=640&amp;h=362&amp;f=png&amp;s=215599" alt=""><br><a target="_blank" rel="noopener" href="https://codepen.io/xuxinhang/pen/KJjBbP">去这个 Demo，看具体代码和效果</a></p>
+<p><img src="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/16915ae4bf83ad55.png"><br><a target="_blank" rel="noopener" href="https://codepen.io/xuxinhang/pen/KJjBbP">去这个 Demo，看具体代码和效果</a></p>
 <p>齿轮图标确实是变为镂空的了。不过，为什么呢？</p>
 <p>先来明确一件事：把浮层置于视频之上，浮层是“前景”，视频是“背景”。先来看浮层的白色部分，因为把白色置于任何颜色之上都得到白色，所以白色部分被保留；而因为黑色置于任何颜色之上都得到下层的颜色，所以黑色部分呈现镂空效果。</p>
 <p>但是这样的实现比较 Hack，因为这里只使用了黑白两色，如果使用其它的颜色作为浮层的 <code>background-color</code>，得到的就不会像是镂空的效果了，这时还是得请上面的<code>mask</code>家族出场。不过，单单对于白底的情况，<code>mix-blend-mode</code> 不失为一个可行的解法。</p>
@@ -192,7 +195,7 @@ mask-mode
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/" data-id="cklt0yx5r000eh4ss5r9q3o9y" data-title="用纯 CSS 实现镂空效果" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/" data-id="ckm7shed7000rhbq1392eezex" data-title="用纯 CSS 实现镂空效果" class="article-share-link">分享</a>
       
       
       
@@ -204,19 +207,19 @@ mask-mode
     
 <nav id="article-nav">
   
-    <a href="/2021/03/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/25/LaTeX%E5%85%A5%E9%97%A8%E5%B0%8F%E8%AE%B0%EF%BC%9AVim+Vimtex+LaTeX%E5%88%9D%E4%BD%93%E9%AA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          Hello World
+          LaTeX 入门小记：Vim + Vimtex + LaTeX 初体验
         
       </div>
     </a>
   
   
-    <a href="/2019/01/11/%E5%89%96%E6%9E%90-HTTPS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/12/%E4%BD%BF%E7%94%A8Heroku%E6%88%96OpenShift%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91V2Ray%E6%9C%8D%E5%8A%A1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">剖析 HTTPS 的设计思路</div>
+      <div class="article-nav-title">使用 Heroku 或 OpenShift 搭建自己的免费科学上网 V2Ray 服务</div>
     </a>
   
 </nav>
@@ -230,13 +233,20 @@ mask-mode
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LaTeX/">LaTeX</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/" rel="tag">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/" rel="tag">HTTPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blend-mode/" rel="tag">blend mode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mask/" rel="tag">mask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag">密码学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%95%82%E7%A9%BA/" rel="tag">镂空</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/" rel="tag">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/" rel="tag">HTTPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/" rel="tag">LaTeX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/V2Ray/" rel="tag">V2Ray</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/" rel="tag">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blend-mode/" rel="tag">blend mode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mask/" rel="tag">mask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag">密码学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%95%82%E7%A9%BA/" rel="tag">镂空</a></li></ul>
     </div>
   </div>
 
@@ -246,7 +256,7 @@ mask-mode
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Context/" style="font-size: 10px;">Context</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/blend-mode/" style="font-size: 10px;">blend mode</a> <a href="/tags/mask/" style="font-size: 10px;">mask</a> <a href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" style="font-size: 10px;">发布订阅</a> <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 10px;">密码学</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发工具</a> <a href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%95%82%E7%A9%BA/" style="font-size: 10px;">镂空</a>
+      <a href="/tags/CSS/" style="font-size: 16.67px;">CSS</a> <a href="/tags/Context/" style="font-size: 10px;">Context</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LaTeX/" style="font-size: 13.33px;">LaTeX</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/V2Ray/" style="font-size: 10px;">V2Ray</a> <a href="/tags/Vim/" style="font-size: 13.33px;">Vim</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/blend-mode/" style="font-size: 10px;">blend mode</a> <a href="/tags/mask/" style="font-size: 10px;">mask</a> <a href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" style="font-size: 10px;">发布订阅</a> <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 10px;">密码学</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发工具</a> <a href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 10px;">科学上网</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%95%82%E7%A9%BA/" style="font-size: 10px;">镂空</a>
     </div>
   </div>
 
@@ -255,7 +265,7 @@ mask-mode
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
     </div>
   </div>
 
@@ -268,23 +278,23 @@ mask-mode
       <ul>
         
           <li>
-            <a href="/2021/03/03/hello-world/">Hello World</a>
+            <a href="/2021/03/13/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/24/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%80%8E%E6%A0%B7%E6%95%B4%E7%90%86%E5%90%84%E5%BC%8F%E5%90%84%E6%A0%B7%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%96%87%E4%BB%B6%EF%BC%9F/">杂谈：怎样整理各式各样的个人文件？</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/28/%E6%80%8E%E6%A0%B7%E8%88%92%E9%80%82%E5%9C%B0%E4%BD%BF%E7%94%A8Vim%E7%A0%81%E5%AD%97%E5%86%99%E6%96%87%E7%AB%A0/">怎样舒适地使用 Vim 码字写文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/LaTeX%E5%85%A5%E9%97%A8%E5%B0%8F%E8%AE%B0%EF%BC%9AVim+Vimtex+LaTeX%E5%88%9D%E4%BD%93%E9%AA%8C/">LaTeX 入门小记：Vim + Vimtex + LaTeX 初体验</a>
           </li>
         
           <li>
             <a href="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/">用纯 CSS 实现镂空效果</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/11/%E5%89%96%E6%9E%90-HTTPS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/">剖析 HTTPS 的设计思路</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/18/Pro-Git-Reading-Note-Part-II/">Pro Git Reading Note Part II</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/18/Pro-Git-Reading-Note-Part-I/">Pro Git Reading Note Part I</a>
           </li>
         
       </ul>

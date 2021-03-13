@@ -75,6 +75,498 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-管理系统的登录控制？手写一个发布订阅模型！" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/10/17/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%EF%BC%9F%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9E%8B%EF%BC%81/" class="article-date">
+  <time class="dt-published" datetime="2018-10-17T15:10:16.000Z" itemprop="datePublished">2018-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/10/17/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%EF%BC%9F%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9E%8B%EF%BC%81/">管理系统的登录控制？手写一个发布订阅模型！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近做了一个后台的项目，既然是后台管理系统，登录的控制自然是少不了的。</p>
+<p>接到需求——后台系统！花了几乎半天搞出来了Webpack配置、搞出来了React  Router、搞出来了 React  代码基本的结构，下一步就是搞所谓的“登录逻辑”了。</p>
+<p>正好 React v16 大变，而自己最近又有些时候没写过React了，便不妨借这次机会熟悉一下React的新API吧！听说React新出的 Context API 可以“取代Redux”，那这次登录逻辑就用 Context 写吧！</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/10/17/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%EF%BC%9F%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9E%8B%EF%BC%81/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/10/17/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%EF%BC%9F%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9E%8B%EF%BC%81/" data-id="ckm7shed8000uhbq173o2ai71" data-title="管理系统的登录控制？手写一个发布订阅模型！" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-关于Promise的几个Tips" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/05/18/%E5%85%B3%E4%BA%8EPromise%E7%9A%84%E5%87%A0%E4%B8%AATips/" class="article-date">
+  <time class="dt-published" datetime="2018-05-18T04:54:08.000Z" itemprop="datePublished">2018-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/05/18/%E5%85%B3%E4%BA%8EPromise%E7%9A%84%E5%87%A0%E4%B8%AATips/">关于Promise的几个Tips</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Promise-概念"><a href="#Promise-概念" class="headerlink" title="Promise 概念"></a>Promise 概念</h1><p>略</p>
+<h1 id="TIPS1-返回值和方法链"><a href="#TIPS1-返回值和方法链" class="headerlink" title="TIPS1 返回值和方法链"></a>TIPS1 返回值和方法链</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Promise#then(resolveCallback [, rejectCallback])</span><br><span class="line">Promise#catch(rejectCallback)</span><br></pre></td></tr></table></figure>
+<p>（其实就是同个方法）</p>
+<p>如果Promise是接受态的，会调用resolveCallback，至于会传入什么参数，就要看Promise 写成什么样子了。<br>Promise是拒绝的，会调用rejectCallback。</p>
+<p>Promise机制的最大好处：链式调用<br>Promise#then 仍然返回一个Promise，所以可以链式调用Promise#then，一次完成多个异步动作</p>
+<h2 id="Callback的返回值和Promise-then的返回值"><a href="#Callback的返回值和Promise-then的返回值" class="headerlink" title="Callback的返回值和Promise#then的返回值"></a>Callback的返回值和Promise#then的返回值</h2><h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>then方法返回一个Promise，而它的行为与then中的回调函数的返回值有关：<br>• 如果then中的回调函数返回一个值，那么then返回的Promise将会成为接受状态，并且将返回的值作为接受状态的回调函数的参数值。<br>• 如果then中的回调函数抛出一个错误，那么then返回的Promise将会成为拒绝状态，并且将抛出的错误作为拒绝状态的回调函数的参数值。</p>
+<p>• 如果then中的回调函数返回一个已经是接受状态的Promise，那么then返回的Promise也会成为接受状态，并且将那个Promise的接受状态的回调函数的参数值作为该被返回的Promise的接受状态回调函数的参数值。<br>• 如果then中的回调函数返回一个已经是拒绝状态的Promise，那么then返回的Promise也会成为拒绝状态，并且将那个Promise的拒绝状态的回调函数的参数值作为该被返回的Promise的拒绝状态回调函数的参数值。<br>• 如果then中的回调函数返回一个未定状态（pending）的Promise，那么then返回Promise的状态也是未定的，并且它的终态与那个Promise的终态相同；同时，它变为终态时调用的回调函数参数与那个Promise变为终态时的回调函数的参数是相同的。</p>
+<ul>
+<li>Callback中 return<br>#then返回一个接受态的Promise。相当于Promise.resolve(what_returned_by_your_code)<br>于是你可以在链中接进去一个#then</li>
+<li>Callback中 throw。<br>返回拒绝的Promise。= Promise.reject(what_thrown_by_you)<br>会调用接下来的#catch</li>
+<li>Callback中返回Promise 接受态/拒绝态/等待态<br>#then返回值就是你在Callback中返回的Promise。因为这个特性，所以你可以进行多个连续的一环套一环的异步操作了。</li>
+</ul>
+<p>【注意】上面的规则无论针对resolveCb还是rejectCb都是适用的，#then返回的Promise的状态和从哪个Callback返回的无关。即使是一个失败的Promise，经过#then的处理，也可以返回一个成功的Promise以继续方法链。<br>“在一个失败操作（即一个 catch）之后可以继续使用链式操作，即使链式中的一个动作失败之后还能有助于新的动作继续完成。”</p>
+<p>【注意】JS引擎抛出的错误也会导致#then返回失败的Promise，但是不会在console里有任何提示。所以特别注意“静默失败”问题。 —-下面会再谈这个事情。</p>
+<h1 id="TIPS2-Callback的坑"><a href="#TIPS2-Callback的坑" class="headerlink" title="TIPS2 Callback的坑"></a>TIPS2 Callback的坑</h1><p>虽然在executor 里面可以 resolve(arg1, arg2, …) 或者reject(arg1, arg2, …)。但是在Callback只有第一个参数是可用的。<br>MDN上 也明确指出了这一点。参看MDN文档。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">  reject(&#123;a: 1, b: 2&#125;, &#39;arg2&#39;)</span><br><span class="line">&#125;).catch((...args) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(args)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">[…]</span><br><span class="line">  0: Object &#123; a: 1, b: 2 &#125;</span><br><span class="line">  length: 1 &#x2F;* ⚠ *&#x2F;</span><br><span class="line">  __proto__: Array []</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;* 只好这样了：还算优雅吧 *&#x2F;</span><br><span class="line">new Promise((resolve) &#x3D;&gt; &#123;</span><br><span class="line">  resolve(&#123;a: 1, b: 2&#125;);</span><br><span class="line">&#125;).then((&#123;a, b&#125;) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(a, b);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="TIPS3-隆重介绍：Promise-finally"><a href="#TIPS3-隆重介绍：Promise-finally" class="headerlink" title="TIPS3 隆重介绍：Promise#finally"></a>TIPS3 隆重介绍：Promise#finally</h1><p>finally() 方法返回一个Promise，在执行then()和catch()后，都会执行finally指定的回调函数。避免同样的语句需要在then()和catch()中各写一次的情况。<br>#finally的返回值：返回此#finally附加到的Promise本身。<br>finally的回调函数中不接收任何参数</p>
+<p>但是现在浏览器支持还不算很好。</p>
+<h1 id="TIPS5-then-success-fail-与-then-success-catch-fail-的区别"><a href="#TIPS5-then-success-fail-与-then-success-catch-fail-的区别" class="headerlink" title="TIPS5 .then(success, fail) 与 .then(success).catch(fail) 的区别"></a>TIPS5 <code>.then(success, fail)</code> 与 <code>.then(success).catch(fail)</code> 的区别</h1><p>.catch 里的fail会把.then的success中的错误捕获住。但是前一种方法不会</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">var somePromise &#x3D; Promise.resolve(&#123;code: 200, data: &#39;OK&#39;&#125;);</span><br><span class="line"></span><br><span class="line">somePromise</span><br><span class="line">.then(() &#x3D;&gt; &#123;</span><br><span class="line">  undefined.undefined;</span><br><span class="line">  &#x2F;&#x2F; A silly error you haven&#39;t noticed</span><br><span class="line">  console.log(&#39;你的表单已提交！&#39;);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(() &#x3D;&gt; &#123;</span><br><span class="line">  console.error(&#39;提交表单时遇到问题，请检查网络！&#39;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * [ERROR] &quot;提交表单时遇到问题，请检查网络！&quot;</span><br><span class="line"> * 你可能会先从 somePromise 上找问题</span><br><span class="line"> * 你手抖写下的错误代码被“藏”起来了</span><br><span class="line"> *&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">somePromise</span><br><span class="line">.then(() &#x3D;&gt; &#123;</span><br><span class="line">  undefined.undefined;</span><br><span class="line">  &#x2F;&#x2F; A silly error you haven&#39;t noticed</span><br><span class="line">  console.log(&#39;你的表单已提交！&#39;);</span><br><span class="line">&#125;, () &#x3D;&gt; &#123;</span><br><span class="line">  console.error(&#39;提交表单时遇到问题，请检查网络！&#39;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line"> * TypeError: undefined has no properties</span><br><span class="line"> * 我想你一看控制台就知道问题出在哪里了</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+<p><strong>小调查：你们喜欢怎么写？</strong></p>
+<h1 id="TIPS7-深入JS引擎，探究-Promise-与-Event-Loop"><a href="#TIPS7-深入JS引擎，探究-Promise-与-Event-Loop" class="headerlink" title="TIPS7 深入JS引擎，探究 Promise 与 Event Loop"></a>TIPS7 深入JS引擎，探究 Promise 与 Event Loop</h1><p>来自hzy的解答（基于Node.js / V8）</p>
+<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/topics/850">https://newbbs.bingyan.net/topics/850</a></p>
+<p>问题：<strong>ECMAScript 规范中没有叫 Event Loop、Task List、Micro Task 等概念！</strong> 所以，还是读规范吧。</p>
+<p>开始阅读ECMA规范</p>
+<p>Note<br>Typically an ECMAScript implementation will have its Job Queues pre-initialized with at least one PendingJob and one of those Jobs will be the first to be executed. An implementation might choose to free all resources and terminate if the current Job completes and all Job Queues are empty. Alternatively, it might choose to wait for a some implementation specific agent or mechanism to enqueue new PendingJob requests.</p>
+<p>The following abstract operations are used to create and manage Jobs and Job Queues:</p>
+<p>running execution context == 执行栈</p>
+<p>但是，PromiseJobs执行的先后次序规范中没有提到<br>所以，读规范读到最后，还是不知道是怎么回事。<br>但是，现在的主流浏览器中Promise回调都在其他回调（如setTimeout）之前。待解答。</p>
+<h2 id="尾声：看一道题目"><a href="#尾声：看一道题目" class="headerlink" title="尾声：看一道题目"></a>尾声：看一道题目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">console.log(1);</span><br><span class="line">new Promise(function (resolve, reject)&#123;</span><br><span class="line">    reject(true);</span><br><span class="line">    window.setTimeout(function ()&#123;</span><br><span class="line">        resolve(false);</span><br><span class="line">    &#125;, 0);</span><br><span class="line">&#125;).then(function()&#123;</span><br><span class="line">    console.log(2);</span><br><span class="line">&#125;, function()&#123;</span><br><span class="line">    console.log(3);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(4);</span><br></pre></td></tr></table></figure>
+<p>来自 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006172528">https://segmentfault.com/a/1190000006172528</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/05/18/%E5%85%B3%E4%BA%8EPromise%E7%9A%84%E5%87%A0%E4%B8%AATips/" data-id="ckm7shecy000fhbq11wye0qd2" data-title="关于Promise的几个Tips" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Windows-Git中OpenSSH无ssh-agent多密钥配置小记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/03/17/Windows-Git%E4%B8%ADOpenSSH%E6%97%A0ssh-agent%E5%A4%9A%E5%AF%86%E9%92%A5%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2018-03-17T14:34:56.000Z" itemprop="datePublished">2018-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/03/17/Windows-Git%E4%B8%ADOpenSSH%E6%97%A0ssh-agent%E5%A4%9A%E5%AF%86%E9%92%A5%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/">Windows-Git中OpenSSH无ssh-agent多密钥配置小记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近Git环境崩了，只好重新配置一下。笔者使用的是Windows环境，众所周知，Windows下面配置各种环境都很坑的，Git也不例外。我感觉最大的坑就是SSH的问题。Windows下面 <code>ssh-agent</code> <strong>不自动启动，不长驻内存</strong>。当然，我可以强行设置一波系统自启动，也可以通过配置使得在启动 Git Bash 的时候先静默执行agent再进入环境——虽然都可以解决问题，<strong>但是总是感觉不舒服</strong>。此外，我手里也有多个私钥，在使用Git时，<strong>我需要把这些私钥都载入</strong>。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/03/17/Windows-Git%E4%B8%ADOpenSSH%E6%97%A0ssh-agent%E5%A4%9A%E5%AF%86%E9%92%A5%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/03/17/Windows-Git%E4%B8%ADOpenSSH%E6%97%A0ssh-agent%E5%A4%9A%E5%AF%86%E9%92%A5%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0/" data-id="ckm7shecs000ahbq1f5g9d2l2" data-title="Windows-Git中OpenSSH无ssh-agent多密钥配置小记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-CSS-视觉格式化模型-Visual-Formatting-Model" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/" class="article-date">
+  <time class="dt-published" datetime="2018-02-18T04:52:09.000Z" itemprop="datePublished">2018-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/">CSS 视觉格式化模型 Visual Formatting Model</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/7e8f35beff7b07022095b9bc4b634416.png" alt="img"></p>
+<h1 id="What’s-CSS-Visual-Formatting-Model"><a href="#What’s-CSS-Visual-Formatting-Model" class="headerlink" title="What’s CSS Visual Formatting Model"></a>What’s CSS Visual Formatting Model</h1><ul>
+<li>视觉格式化模型(visual formatting model)是用来处理文档并将它显示在视觉媒体上的机制。</li>
+<li>根据CSS盒模型，浏览器为文档元素生成盒子(Box)。视觉格式化模型就是文档里的“盒子布局呈现的一种规则”。</li>
+</ul>
+<h1 id="Basic-Concepts-in-CSS-specification"><a href="#Basic-Concepts-in-CSS-specification" class="headerlink" title="Basic Concepts in CSS specification"></a>Basic Concepts in CSS specification</h1><h3 id="The-“Box”-in-the-sight-of-W3C"><a href="#The-“Box”-in-the-sight-of-W3C" class="headerlink" title="The “Box” in the sight of W3C"></a>The “Box” in the sight of W3C</h3><p>各位至少对CSS盒模型有所耳闻吧？CSS盒子（Box）是由 CSS 引擎根据文档中的内容所创建，用于文档元素的定位、布局和格式化等的布局单位。</p>
+<blockquote>
+<p><strong>Q: 一个元素 等于 一个盒子 ？</strong></p>
+<p>A: 我都这么问了，答案肯定是否定的。反例：</p>
+<ol>
+<li><code>&lt;li&gt;</code> 元素，除了标签内容之外，前面的项目符号也生成了一个盒子。</li>
+<li>跨行的行内元素（例如 大段的文本）。分布在不同行的部分分别属于不同的盒子。</li>
+</ol>
+</blockquote>
+<h3 id="Overview-Block-Inline-and-Boxes"><a href="#Overview-Block-Inline-and-Boxes" class="headerlink" title="Overview: Block , Inline and Boxes"></a>Overview: Block , Inline and Boxes</h3><p>很多概念你可以分得清吗？</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/2766dbbad7cb2b9d773b5e699f53f450.png" alt="img"></p>
+<p><strong>术语表：*见文末*。</strong></p>
+<ul>
+<li>块盒(Block Box)：既是块级盒(Block Level Box) 也是 块容器盒(Block Container Box) 的盒子。</li>
+<li>包含块(containing block): 包含其他盒子的块称为包含块。</li>
+</ul>
+<h3 id="块级盒子-Block-Level-Box"><a href="#块级盒子-Block-Level-Box" class="headerlink" title="块级盒子 // Block-Level Box"></a>块级盒子 // Block-Level Box</h3><p><strong>当元素的 display为block、list-item或table时，该元素将成为块级元素。</strong> 块级盒子参与块级格式化上下文。块级盒子描述元素与其父元素和兄弟元素之间的行为。块容器盒子描述了元素跟其后代之间的行为（例如，子元素相对父元素进行定位）。</p>
+<ul>
+<li><strong>有些块级盒子并不是块容器盒子。</strong> 比如表格，表格的单元格明显不是块级嘛，但是它还是可以包含div等块级的盒子。其实表格内部是“表格格式化上下文”。</li>
+<li><strong>有些块容器盒子也不是块级盒子</strong> 。如非替换行内级块和非替换表格单元格。（下文有具体的例子）。</li>
+</ul>
+<blockquote>
+<p><strong>Q: 什么是替换元素？</strong></p>
+<p>替换元素就是浏览器根据元素的标签和属性，来决定元素的具体显示内容。比如<code>img</code>元素通过<code>src</code>属性的值来读取图片信息并显示出来，而 HTML 代码里没有图片的实际内容；又例如 <code>input</code> 元素的 <code>type</code> 属性决定是显示输入框，还是单选按钮等。<br><code>html&lt;img src=&quot;girl.jpg&quot;/&gt; &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;提交&quot;/&gt; </code></p>
+<p>HTML 的大多数元素是非替换元素，即浏览器直接渲染HTML标签内的内容。 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;p的内容&lt;&#x2F;p&gt;</span><br><span class="line">&lt;em&gt;label的内容&lt;&#x2F;em&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><blockquote>
+<p><strong>Q: “块级元素” 对应一个 “块级盒子”?</strong></p>
+<p>A: 不一定。大多数块级元素都仅会生成一个块级盒子。但有的块级元素 <code>&lt;li&gt;</code>可能会生成更多盒子。</p>
+</blockquote>
+<h3 id="行内级盒子-Inline-Level-Box"><a href="#行内级盒子-Inline-Level-Box" class="headerlink" title="行内级盒子 // Inline-Level Box"></a>行内级盒子 // Inline-Level Box</h3><p>行内级元素是 <code>display</code> 属性为 <code>inline-*</code> 的元素和其他默认行内的元素。</p>
+<p>行内级元素会生成行内级盒子，参与行内格式化上下文（IFC）。</p>
+<blockquote>
+<p><strong>Q：“原子”可以再分吗？</strong>或者说 生成 “原子行内级盒子” 的元素 可以拥有子元素吗？</p>
+</blockquote>
+<h3 id="行内级盒子-vs-行内盒子-vs-原子行内级盒子"><a href="#行内级盒子-vs-行内盒子-vs-原子行内级盒子" class="headerlink" title="行内级盒子 vs. 行内盒子 vs. 原子行内级盒子"></a>行内级盒子 vs. 行内盒子 vs. 原子行内级盒子</h3><p>傻傻分不清。<strong>“行内级盒子” 分为 “行内盒” 与 “原子行内级盒” 两种。 注意概念区分与包含关系</strong> 。</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/18918e6b5fc9dc6a2b2d5eb515f3c251.png" alt="img"></p>
+<h4 id="行内盒子-Inline-Box"><a href="#行内盒子-Inline-Box" class="headerlink" title="行内盒子 // Inline-Box"></a>行内盒子 // Inline-Box</h4><p>其内容会参与创建其容器的行内格式化上下文。可以被拆分成多个盒子然后放置在包含它的盒子里。</p>
+<p>例如：<code>display: inline</code></p>
+<p>下面这张图片里，蓝色字包含在<code>&lt;em&gt;</code>里面。而这个标签拆成了三个块，和包含它的盒子的行内盒子“融为一体”，也就是所谓的<code>“参与创建其容器的行内格式化上下文”</code>。</p>
+<p>（下图的绿色虚线框使用<code>CSS outline 属性</code>生成。印证了“生成三个盒子”的说法。）</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/50571bc1ec99df9e1fea0f0b780c4321.png" alt="img"></p>
+<h4 id="原子行内级盒子-Atomic-Inline-Level-Box"><a href="#原子行内级盒子-Atomic-Inline-Level-Box" class="headerlink" title="原子行内级盒子 // Atomic Inline-Level Box"></a>原子行内级盒子 // Atomic Inline-Level Box</h4><p>内容不参与行内格式化上下文的创建，像原子一样不可再拆成多个盒子。</p>
+<p>例子： 替换行内级元素（例<code>&lt;img /&gt;</code>）、<code>display: inline-block</code>、<code>inline-table</code>。</p>
+<p>下图的<code>&lt;em&gt;</code>被添加了<code>inline-block</code>，成为原子行内级元素。它自成”独立王国“，其内容 <em>不会</em> 参与其容器盒子的格式化上下文。</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/73e9c8e631156c77f4e9b4b0f1331041.png" alt="img"></p>
+<h4 id="原子行内级盒的排布"><a href="#原子行内级盒的排布" class="headerlink" title="原子行内级盒的排布"></a>原子行内级盒的排布</h4><p>原子行内盒在行内格式化上下文里 <strong>不能拆成多个盒子</strong> 。</p>
+<p>默认情况下，如果一行的剩余空间容不下，那就去新开一行；如果新开的一行也容不下，那就算溢出容器也不让拆成多个盒子。</p>
+<p><strong>单个汉字 / 单个英文单词 就是一个自然的原子行内级盒</strong> 。当然，一些CSS属性会改变对“原子”的判定，例如 <code>word-break: break-all</code>。见下图。</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/f67abd5d7a768c10b3b57bb2d24d207a.png" alt="img"></p>
+<blockquote>
+<p><strong>Q：“原子”可以再分吗？</strong>或者说 生成 “原子行内级盒子” 的元素 可以拥有子元素吗？</p>
+<p>A: 可以包含子元素。<code>display: inline-block</code>的元素会生成原子行内级盒子，也可以包含子元素。</p>
+</blockquote>
+<h3 id="题外话：Line-Box-行盒-是什么"><a href="#题外话：Line-Box-行盒-是什么" class="headerlink" title="题外话：Line-Box 行盒 是什么"></a>题外话：Line-Box 行盒 是什么</h3><p>行盒（Line Box, 也叫行框）是由行内格式化上下文(IFC)产生的盒，用于表示一行。在块盒里面，行盒从块盒一边排版到另一边（从左右浮动元素边缘开始计）。</p>
+<p><em>一般我们 CSS 布局时不需关注。这和我们上文讨论的概念没有直接的联系。</em></p>
+<h3 id="没有盒子也要强行加盒子——匿名盒子"><a href="#没有盒子也要强行加盒子——匿名盒子" class="headerlink" title="没有盒子也要强行加盒子——匿名盒子"></a>没有盒子也要强行加盒子——匿名盒子</h3><p>在某些情况下进行视觉格式化时，需要添加一些增补性的盒子，这些盒子 <strong>不能</strong> 用CSS选择符选中，称为 <strong>匿名盒子（anonymous boxes）</strong> 。</p>
+<p>不能被 CSS 选择符选中意味着不能用样式表添加样式。不过，它们的样式表现可以这样理解：<br>🔸可继承的 CSS 属性值都为 <code>inherit</code><br>🔸不可继承的 CSS 属性值都为 <code>initial</code></p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/4ef4f442d3e2a9f436e9fc6d9d92230a.png" alt="img"></p>
+<p>上图含有了两个匿名块盒子，下图显示了两个匿名行内盒子。</p>
+<h1 id="Various-“Formatting-Contexts”"><a href="#Various-“Formatting-Contexts”" class="headerlink" title="Various “Formatting Contexts”"></a>Various “Formatting Contexts”</h1><h3 id="What’s-Formatting-Context"><a href="#What’s-Formatting-Context" class="headerlink" title="What’s Formatting Context"></a>What’s Formatting Context</h3><p>“格式化上下文”…… 什么叫“上下文”，真是一个蹩脚的翻译！</p>
+<p>我的理解：每种 <em>环境(context)</em> 各自对应着盒模型格式化的一套 <em>规则(layout)</em></p>
+<blockquote>
+<p>Boxes in the normal flow belong to a formatting context</p>
+<p>正常流中的盒子属于某一个格式化上下文。</p>
+<p>正常流：文档流，非绝对定位的盒子在其中。</p>
+</blockquote>
+<p>下面是几种FC：</p>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/4f07d3e67edf70f09ba92c1b687080d8.png" alt="img"></p>
+<h3 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h3><h4 id="产生条件"><a href="#产生条件" class="headerlink" title="产生条件"></a>产生条件</h4><ol>
+<li><u>根元素</u>或其它包含它的元素</li>
+<li>浮动<code>float: left/right/inherit</code></li>
+<li>绝对定位<code>position: absolute/fixed</code></li>
+<li>行内块<code>display: inline-block</code></li>
+<li>表格单元格<code>display: table-cell</code></li>
+<li>表格标题<code>display: table-caption</code></li>
+<li>溢出元素 <code>overflow: hidden/scroll/auto/inherit</code>（“浮动坍塌”的快捷解决方案之一）</li>
+</ol>
+<h4 id="布局规则"><a href="#布局规则" class="headerlink" title="布局规则"></a>布局规则</h4><ul>
+<li>内部的Box会在垂直方向，一个接一个地放置。</li>
+<li>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。</li>
+<li>每个元素的marginbox的左边，与包含块borderbox的左边相接触。即使存在浮动也是如此。</li>
+<li><strong>BFC的区域不会与float box重叠</strong> 。</li>
+<li>BFC就是页面上的一个隔离的独立容器， <strong>容器里面的子元素不会影响到外面的元素</strong> 。反之也如此。</li>
+<li><strong>计算BFC的高度时，浮动元素也参与计算</strong> 。</li>
+</ul>
+<h4 id="实用层面"><a href="#实用层面" class="headerlink" title="实用层面"></a>实用层面</h4><ul>
+<li>浮动区域不叠加到BFC区域上</li>
+<li>防止与浮动元素重叠</li>
+<li>防止margin合并</li>
+<li>float高度塌陷</li>
+</ul>
+<p><img src="/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/65c91d27b6b5bee5ae574f2f4fd3fca4.png" alt="img"></p>
+<h4 id="Related-Demos"><a href="#Related-Demos" class="headerlink" title="Related Demos"></a>Related Demos</h4><p>防止与浮动元素重叠 | <a target="_blank" rel="noopener" href="https://codepen.io/SitePoint/pen/xGpMRP">https://codepen.io/SitePoint/pen/xGpMRP</a></p>
+<p>margin collapse | <a target="_blank" rel="noopener" href="https://codepen.io/SitePoint/pen/XbVOXp">https://codepen.io/SitePoint/pen/XbVOXp</a></p>
+<p>自己写一个 | <a target="_blank" rel="noopener" href="https://codepen.io/xuxinhang/pen/QmXEWz">https://codepen.io/xuxinhang/pen/QmXEWz</a></p>
+<h3 id="IFC"><a href="#IFC" class="headerlink" title="IFC"></a>IFC</h3><h4 id="触发条件"><a href="#触发条件" class="headerlink" title="触发条件"></a>触发条件</h4><p>一个块级元素中 <strong>仅</strong> 包含内联级别元素。</p>
+<p>所以如果还包含块级盒子那内部是BFC。（参见 ”匿名盒子“小节 的例子。）</p>
+<h4 id="布局规则-1"><a href="#布局规则-1" class="headerlink" title="布局规则"></a>布局规则</h4><ul>
+<li>内部的盒子会在水平方向，一个接一个地放置。</li>
+<li>这些盒子垂直方向的起点从包含块盒子的顶部开始。</li>
+<li>摆放这些盒子的时候，它们在水平方向上的 padding、border、margin 所占用的空间都会被考虑在内。</li>
+<li>在垂直方向上，这些框可能会以不同形式来对齐（vertical-align）：它们可能会使用底部或顶部对齐，也可能通过其内部的文本基线（baseline）对齐。</li>
+<li>能把在一行上的框都完全包含进去的一个矩形区域，被称为该行的 <strong>行框（line box）</strong>。 <strong>行框的宽度是由包含块（containing box）和存在的浮动来决定</strong> 。</li>
+<li>IFC中的 line box 一般左右边都贴紧其包含块，但是会因为float元素的存在发生变化。float 元素会位于IFC与与 line box 之间，使得 line box 宽度缩短。</li>
+<li>IFC 中的 line box 高度由 CSS 行高计算规则来确定，同个 IFC 下的多个 line box 高度可能会不同（比如一行包含了较高的图片，而另一行只有文本）</li>
+<li>当 inline-level boxes 的总宽度少于包含它们的 line box 时，其水平渲染规则由 text-align 属性来确定，如果取值为 justify，那么浏览器会对 inline-boxes（注意不是inline-table 和 inline-block boxes）中的文字和空格做出拉伸。</li>
+<li><strong>【敲黑板】</strong> <em>当一个 inline box 超过 line box 的宽度时，它会被分割成多个boxes，这些 boxes 被分布在多个 line box 里。如果一个 inline box 不能被分割（比如只包含单个字符，或 word-breaking 机制被禁用，或该行内框受 white-space 属性值为 nowrap 或 pre 的影响），那么这个 inline box 将溢出这个 line box。</em></li>
+</ul>
+<h4 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h4><ul>
+<li>水平居中：当一个块要在环境中水平居中时，设置其为 inline-block 则会在外层产生 IFC，通过设置父容器 text-align:center 则可以使其水平居中。</li>
+<li>垂直居中：创建一个IFC，用其中一个元素撑开父元素的高度，然后设置其 vertical-align:middle，其他行内元素则可以在此父元素下垂直居中。</li>
+</ul>
+<h3 id="FFC"><a href="#FFC" class="headerlink" title="FFC"></a>FFC</h3><h4 id="触发条件-1"><a href="#触发条件-1" class="headerlink" title="触发条件"></a>触发条件</h4><p>当 <code>display</code>的值为<code>flex</code>或<code>inline-flex</code>时，其内容建立了一个新的 <strong>弹性格式化上下文</strong> 。</p>
+<h4 id="布局规则-2"><a href="#布局规则-2" class="headerlink" title="布局规则"></a>布局规则</h4><ul>
+<li>设置为 flex 的容器被渲染为一个块级元素</li>
+<li>设置为 inline-flex 的容器则渲染为一个行内元素</li>
+<li>弹性容器中的每一个子元素都是一个弹性项目。弹性项目可以是任意数量的。弹性容器外和弹性项目内的一切元素都不受影响。</li>
+</ul>
+<p><em>FFC 里也可存在匿名盒子！</em></p>
+<h3 id="GFC"><a href="#GFC" class="headerlink" title="GFC"></a>GFC</h3><h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><p>当为一个元素设置为网格布局<code>display: grid/grid-inline</code>的时候，此元素内部将会是一个 <strong>GFC</strong> 。</p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><p>通过在网格容器（grid container）上定义网格定义行（grid definition rows）和网格定义列（grid definition columns）属性各在网格项目（grid item）上定义网格行（grid row）和网格列（grid columns）为每一个网格项目（grid item）定义位置和空间。</p>
+<h3 id="TFC-Table-FC"><a href="#TFC-Table-FC" class="headerlink" title="TFC (Table-FC)"></a>TFC (Table-FC)</h3><p>In terms of the visual formatting model, a table can behave like a <a target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS22/visuren.html">block-level</a> (for ‘<code>display:table</code>‘)or <a target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS22/visuren.html">inline-level</a> (for <code>&#39;display:inline-table&#39;</code>)element.</p>
+<p>The table box establishes a <strong>table formatting context</strong> .</p>
+<p>互联网上的文章为什么都没有提到 TFC ？可能是谈到这个点的时候 CSS 规范直接”参考Table章节“了吧……</p>
+<p>TFC也存在匿名盒子。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;display: table;&quot;&gt;</span><br><span class="line">    I&#39;m in an anonymous table cell actually.</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>你看到的文本其实在一个 显式的table盒子 里的 匿名的table-row盒子 里的 匿名的table-cell盒子 里。</p>
+<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><h4 id="Vocabulary"><a href="#Vocabulary" class="headerlink" title="Vocabulary"></a>Vocabulary</h4><p><em>来自 MDN 的整理</em></p>
+<blockquote>
+<ul>
+<li><strong>块</strong>：block，一个抽象的概念，一个块在文档流上占据一个独立的区域，块与块之间在垂直方向上按照顺序依次堆叠。</li>
+<li><strong>包含块</strong>：containing block，包含其他盒子的块称为包含块。</li>
+<li><strong>盒子</strong>：box，一个抽象的概念，由CSS引擎根据文档中的内容所创建，主要用于文档元素的定位、布局和格式化等用途。盒子与元素并不是一一对应的，有时多个元素会合并生成一个盒子，有时一个元素会生成多个盒子（如匿名盒子）。</li>
+<li><strong>块级元素</strong>：block-level element，元素的 <code>display</code> 为 <code>block</code>、<code>list-item</code>、<code>table</code> 时，该元素将成为块级元素。元素是否是块级元素仅是元素本身的属性，并不直接用于格式化上下文的创建或布局。</li>
+<li><strong>块级盒子</strong>：block-level box，由块级元素生成。一个块级元素至少会生成一个块级盒子，但也有可能生成多个（例如列表项元素）。</li>
+<li><strong>块盒子</strong>：block box，如果一个块级盒子同时也是一个块容器盒子（见下），则称其为块盒子。除具名块盒子之外，还有一类块盒子是匿名的，称为匿名块盒子（Anonymous block box），匿名盒子无法被CSS选择符选中。</li>
+<li><strong>块容器盒子</strong>：block container box或block containing box，块容器盒子侧重于当前盒子作为“容器”的这一角色，它不参与当前块的布局和定位，它所描述的仅仅是当前盒子与其后代之间的关系。换句话说，块容器盒子主要用于确定其子元素的定位、布局等。</li>
+</ul>
+<p>注意：盒子分为“块盒子”和“块级盒子”两种，但元素只有“块级元素”，而没有“块元素”。下面的“行内级元素”也是一样。</p>
+<ul>
+<li><strong>行内级元素</strong>：inline-level element，<code>display</code> 为 <code>inline</code>、<code>inline-block</code>、<code>inline-table</code> 的元素称为行内级元素。与块级元素一样，元素是否是行内级元素仅是元素本身的属性，并不直接用于格式化上下文的创建或布局。</li>
+<li><strong>行内级盒子</strong>：inline-level box，由行内级元素生成。行内级盒子包括行内盒子和原子行内级盒子两种，区别在于该盒子是否参与行内格式化上下文的创建。</li>
+<li><strong>行内盒子</strong>：inline box，参与行内格式化上下文创建的行内级盒子称为行内盒子。与块盒子类似，行内盒子也分为具名行内盒子和匿名行内盒子（anonymous inline box）两种。</li>
+<li><strong>原子行内级盒子</strong>：atomic inline-level box，不参与行内格式化上下文创建的行内级盒子。原子行内级盒子一开始叫做原子行内盒子（atomic inline box），后被修正。原子行内级盒子的内容不会拆分成多行显示。</li>
+</ul>
+</blockquote>
+<h4 id="看CSS规范的一些注意事项"><a href="#看CSS规范的一些注意事项" class="headerlink" title="看CSS规范的一些注意事项"></a>看CSS规范的一些注意事项</h4><ul>
+<li>CSS3开始，CSS规范把各个部分拆成了很多各自独立、并行发展的小规范，就像打补丁。要看本文的点，还是要去看CSS2的规范，因为CSS3规范是没有定义这些点的。</li>
+<li>比ECMAScript规范易读。</li>
+</ul>
+<h4 id="Refer-to"><a href="#Refer-to" class="headerlink" title="Refer to"></a>Refer to</h4><p><a target="_blank" rel="noopener" href="https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/">https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.w3.org/TR/css-display-3/#flow-layout">https://www.w3.org/TR/css-display-3/#flow-layout</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS22/tables.html#model">https://www.w3.org/TR/CSS22/tables.html#model</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model">https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000013372963">https://segmentfault.com/a/1190000013372963</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/02/18/CSS-%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B-Visual-Formatting-Model/" data-id="ckm7shecd0001hbq10cgiag7x" data-title="CSS 视觉格式化模型 Visual Formatting Model" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-指南：如何让Webpack包加载得更快" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/" class="article-date">
+  <time class="dt-published" datetime="2017-03-01T04:46:23.000Z" itemprop="datePublished">2017-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/">指南：如何让Webpack包加载得更快</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/4ab27a9426ce3fc36133257bec467464.png" alt="img"> </p>
+<h1 id="我们为什么需要加载更快的包"><a href="#我们为什么需要加载更快的包" class="headerlink" title="我们为什么需要加载更快的包"></a>我们为什么需要加载更快的包</h1><ol>
+<li>减少首屏加载时间。 在目前国内的网络条件下，通常一个网站，如果“首屏时间”在2秒以内是比较优秀的，5秒以内用户可以接受，10秒以上就不可容忍了。</li>
+<li>减小打包体积。 并不是每个地方都有4G（去过东图书库吗）</li>
+</ol>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/8bf8f21071a2e1dd6a43796444548325.png" alt="img"></p>
+<h1 id="打包分析工具：找一双好眼睛"><a href="#打包分析工具：找一双好眼睛" class="headerlink" title="打包分析工具：找一双好眼睛"></a>打包分析工具：找一双好眼睛</h1><h2 id="入门工具"><a href="#入门工具" class="headerlink" title="入门工具"></a>入门工具</h2><p>说起 <strong>入门级工具</strong> ，个人感觉比较好用的是“Webpack Visualizer”和“Webpack bundle analyzer”。前者输出环形图，后者是框图，根据自己的喜好选择。很好上手，配置也非常简单，可输出结果为HTML文件。使用这些工具可以很清楚的看到每个bundle分别打包了哪些代码，哪些占据了最大的体积，也可以观察哪些代码其实是无用的可以优化掉的。</p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/c4a4024614f6c518a1bb8e31c35e23bb.png" alt="img"></p>
+<p>比如说下面这张图，我们可以看到vendor文件占了大头，而且axios和fetch两个库功能重复了——这是我之前从来没有注意到的。</p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/a6cd3cd023375a2fd1cde3c75b57db84.png" alt="img"></p>
+<h2 id="进阶工具"><a href="#进阶工具" class="headerlink" title="进阶工具"></a>进阶工具</h2><p>如果需要 <strong>更详细的分析</strong> ，可以使用Webpack官方出品的在线包分析工具（<a target="_blank" rel="noopener" href="http://webpack.github.io/analyse/">http://webpack.github.io/analyse/</a>）。它提供了更强大的功能：查看模块之间的引用关系、模块关系图（虽然是一团乱麻）、从Module和Chunk等多个个角度进行分析、Assets文件分析。</p>
+<p><strong>【使用指引】</strong></p>
+<ol>
+<li>得到stat.json文件。 stat.json存储了某次打包中详细的信息。所有的分析工具都基这个webpack的功能。</li>
+<li>可以使用下面的webpack命令行参数 <code>webpack --profile --json &gt; compilation-stats.json</code> 会保存到compilation-stats.json里</li>
+<li>上面提到的可视化工具也都提供了生成stat.json的选项。具体参照它们的Github</li>
+<li>上传 stat.json 文件</li>
+<li>报告生成，好好看一看吧！</li>
+</ol>
+<p><strong>【怎么看报告】</strong></p>
+<ul>
+<li>上传你的json文件，长传后会看到这么一个界面，会简单描述你的webpack的版本，有多少modules，多少chunks等等</li>
+</ul>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/7cf14189dab4a369d923e5cc0bbe7ec3.png" alt="img"></p>
+<ul>
+<li>点击chunks，可以看到所有chunks的描述，左边是chunks的id，然后有namse，有多少modules，大小，引用它的chunks是谁、即parents，假如我们需要分析id为1的chunk，只需要点击左边的id</li>
+</ul>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/552b024d9c5a522b4b06db3e203d2fde.png" alt="img"></p>
+<ul>
+<li>这里你可以看到更详细的信息，这里最重要的是两个，reasons是引用这个chunks的模块，modules是这个chunks所引用的modules。也就是模块之间的调用关系。<img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/2d8b9a3c1657a69daba4f95ed0632a6d.png" alt="img"></li>
+<li>这里你发现有一个模块不是你想要的modules，你只需要点击这个模块的id，再去查看reasons就可以看到这个模块是被谁引入的。</li>
+<li>也可点击上面的导航来看其他角度的分析。</li>
+</ul>
+<h1 id="更少的代码"><a href="#更少的代码" class="headerlink" title="更少的代码"></a>更少的代码</h1><h2 id="选择合适的框架和库"><a href="#选择合适的框架和库" class="headerlink" title="选择合适的框架和库"></a>选择合适的框架和库</h2><p>不是每次开发都要Vue或者React的……</p>
+<ul>
+<li>【Tips】Zepto是迷你版jQuery</li>
+<li>【Tips】有时候写原生JavaScript也不是一个太差的主意</li>
+</ul>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/1e78c08c004c9454cbd0d480c405c7aa.png" alt="img"></p>
+<h2 id="试试JS模板引擎"><a href="#试试JS模板引擎" class="headerlink" title="试试JS模板引擎"></a>试试JS模板引擎</h2><p>2012年左右流行的模板引擎虽然在目前被普遍认为是一种被淘汰的技术，但是其数据驱动的思想还是值得我们借鉴的，例如它的思想实现数据逻辑和渲染逻辑的解耦，甚至你自己也可以写一个微型的模板渲染器。</p>
+<p>相比主流的的MV*框架，它小巧快速，而这也是这本文所追求的。但是它没有组件的概念，不利于复用和解耦，也不用VirtualDOM技术。所以，简而言之，做一些小规模的、不大变动的数据渲染还是是很合适的。</p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/abd18bee7e0b9ae48812281fae69adbd.png" alt="img"></p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/f936c9fbbf009c57081e0eddb937ec71.png" alt="img"></p>
+<h2 id="精简版框架"><a href="#精简版框架" class="headerlink" title="精简版框架"></a>精简版框架</h2><p>Vue是比较小巧的，而React就不是了。这里推荐两个React精简替代品。我现在使用的是React-Lite，和React的API完美兼容。更换以来到目前也没有遇到什么问题。如果你的项目只是用React常见的API，直接换用React Lite会是个好主意。另一款，Preact，我还没有用过，这里留个坑，以后可以尝试一波。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>React Lite</th>
+<th>Preact</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API</td>
+<td>兼容React API</td>
+<td>类似React的API</td>
+</tr>
+<tr>
+<td>使用体验</td>
+<td>前段时间换用 开发环境暂时没发现问题</td>
+<td>还没用过</td>
+</tr>
+<tr>
+<td></td>
+<td>去掉不常用的功能（例如服务器渲染）</td>
+<td>类似React的实现</td>
+</tr>
+</tbody></table>
+<h2 id="删去多余的模块"><a href="#删去多余的模块" class="headerlink" title="删去多余的模块"></a>删去多余的模块</h2><ul>
+<li>去除不必要的Pollify。包括Babel的配置项和引入的模块（如Promise库、Fetch库）</li>
+<li>寻找轻量的替代品，不要杀鸡用核弹。问一下自己：现在用的库可以换成更加轻量的吗？</li>
+<li>避免为使用部分功能而引入整个模块。目前大型UI库、EChart等都提供了部分导入的用法，即只导入自己需要的那一部分而不是导入完整的库。具体用法参考它们的API文档。</li>
+</ul>
+<h2 id="善用代码分离"><a href="#善用代码分离" class="headerlink" title="善用代码分离"></a>善用代码分离</h2><p>代码分离到多个文件会增加HTTP请求的数目和大小，但可以充分利用浏览器的缓存和文件并行下载功能。这不会减小文件体积，却会给用户一种变快了的感觉。只要不是把文件拆得太零碎，利还是大于弊的。</p>
+<p><em>此处假定你已经会使用CommonChunkPlugin、DLL等插件了。</em></p>
+<h3 id="针对多页应用的三级分割"><a href="#针对多页应用的三级分割" class="headerlink" title="针对多页应用的三级分割"></a>针对多页应用的三级分割</h3><p>看到网上两级分割的做法，我提出了另一种策略。</p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/6f771c0d69ce8a5767ea62430328f1ea.png" alt="img"></p>
+<p>在配置文件里面，你可以像下图这么写，还有些要注意的地方。强烈建议大家好好看看CommonChunk插件的配置选项和官方例子—— <strong>CommonChunk的灵活程度超乎你的想象</strong> 。</p>
+<p><img src="/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/e865b3cc95ea8f05018262a220604bb7.png" alt="img"></p>
+<h3 id="输出文件名使用-“chunkhash”"><a href="#输出文件名使用-“chunkhash”" class="headerlink" title="输出文件名使用 “chunkhash”"></a>输出文件名使用 “chunkhash”</h3><p>[chunkhash]会根据文件内容生成唯一哈希值，而[hash]根据module.id生成</p>
+<p>在Webpack不同版本中，可能会遇到仅仅是module.id变化导致chunkhash变化的问题。解决方案是使用插件，参看WP官方文档-&gt;指南-&gt;缓存。</p>
+<h1 id="压缩图片"><a href="#压缩图片" class="headerlink" title="压缩图片"></a>压缩图片</h1><p><strong>【位　图】</strong>：最低要求是上线之前顺手TinyPNG，可以很方便的批量上传下载，就是速度慢了点。也有其他的开源图片压缩工具，可以方便对接Webpack，但根据网上大佬的测试，压缩率不如TinyPNG高。</p>
+<p>有时间的话，也可以尝试利用TinyPNG提供的接口把图片压缩操作放入生产环境构建过程中，实现build即最小。</p>
+<p><strong>【矢量图】</strong>：单从减小文件体积来说，请多用矢量图，尤其对于大尺寸线条风格icon！在矢量图库里面找一找，或者用大Mac上的Sketch画一个也可以（是的，我就是这么干的）。</p>
+<p>不知道有没有设计师小姐姐看到了这段话。</p>
+<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>我们的目标是向着更快的包进发！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/03/01/%E6%8C%87%E5%8D%97%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9Webpack%E5%8C%85%E5%8A%A0%E8%BD%BD%E5%BE%97%E6%9B%B4%E5%BF%AB/" data-id="ckm7shed3000mhbq1hie70azh" data-title="指南：如何让Webpack包加载得更快" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-说不尽的FlexBox：深入探究" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/" class="article-date">
@@ -100,18 +592,18 @@
         <p><strong>折腾Flexbox的总结</strong></p>
 <p><strong>Demo演示文件请移步文末</strong></p>
 <h1 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h1><p>说来惭愧，我是在几个星期前因为项目的原因才开始大规模地使用flex布局。flex设计的非常巧妙，背后的原理也比较复杂（看看下面的那张图就知道了）。我找了些网上的资料，自己研究了一下flex布局在各种情况下的表现。对现有的结论做出了验证，自己也有了些新结论。学习CSS这个及其灵活的玩意，我们不仅要懂是什么，还要知道为什么。</p>
-<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/1964020d5bc7f6c1ff527af490578f4f.png"><img src="https://newbbs.bingyan.net/photo/2017/1964020d5bc7f6c1ff527af490578f4f.png" alt="img"></a></p>
+<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/1964020d5bc7f6c1ff527af490578f4f.png" alt="img"></p>
 <h3 id="Flex-item的尺寸"><a href="#Flex-item的尺寸" class="headerlink" title="Flex item的尺寸"></a>Flex item的尺寸</h3><p>item-size（尺寸）为主轴方向上item的 content 再加上自身的margin 、 border 和 padding 就是这个 item 的尺寸<br>注意！<strong>margin也计算在内</strong>！</p>
 <h1 id="一些会对布局产生重大影响的属性——它们还好用吗"><a href="#一些会对布局产生重大影响的属性——它们还好用吗" class="headerlink" title="一些会对布局产生重大影响的属性——它们还好用吗"></a>一些会对布局产生重大影响的属性——它们还好用吗</h1><h3 id="令人眼花缭乱的display"><a href="#令人眼花缭乱的display" class="headerlink" title="令人眼花缭乱的display"></a>令人眼花缭乱的display</h3><p>这里选择了几个有代表性的属性值：block, inline, inline-block, table-cell, none, flex<br>虽然现在display的属性值种类繁多，但是在flex里面它们的表现还是很一致的。除了none，自定义的display似乎并不影响flex里面每一元素的表现。<br>在这里我们可以理解成每一项都是flex-item的框模型，但是要注意的是，这里并没有一个叫做“flex-item”的属性值。</p>
 <h3 id="正确理解-flex-item（flex-子元素）"><a href="#正确理解-flex-item（flex-子元素）" class="headerlink" title="正确理解 flex item（flex 子元素）"></a>正确理解 flex item（flex 子元素）</h3><p>CSS解析器会把 定义了Flexbox 下的子元素作为一个特殊的的盒子（在这里就叫flex-item吧）。我们可以把flex-item视为盒子的一个种类，而且Flexbox 下的子元素不会管标签本身的默认盒子类型或者是用display指定的类型，统统都是flex-item。</p>
 <p>【注意】</p>
-<p>CSS没有一个叫flex-item之类的属性，也就是说这种盒子类型是不可被显式指定的。<br>这和 display:table-<em> 不一样。如果我们对一个盒子指定了display:table-cell（单元格） ，那么这个盒子周围会自动虚拟出来几个虚拟盒子，常见的是table（表格）和table-row（表格行） 。很明显display:flex和display:table-</em>在处理盒子的机制上是不同的。</p>
+<p>CSS没有一个叫flex-item之类的属性，也就是说这种盒子类型是不可被显式指定的。<br>这和 display:table-* 不一样。如果我们对一个盒子指定了display:table-cell（单元格） ，那么这个盒子周围会自动虚拟出来几个虚拟盒子，常见的是table（表格）和table-row（表格行） 。很明显display:flex和display:table-*在处理盒子的机制上是不同的。</p>
 <p>【思考】</p>
 <p>我们可以说 “装进” flex-item去吗？<br>flex子元素本身就会成为flex-item型盒子，无所谓再包一层。网上有些文章是不严谨的。<br>不过对于没有放在标签里的文本来说……另当别论</p>
 <h3 id="两种-flex-item"><a href="#两种-flex-item" class="headerlink" title="两种 flex item"></a>两种 flex item</h3><p>我们经常在flexbox下面放置子标签，这样它们就成为了标签节点。不过，我们也可以直接把文字丢到flexbox下面，这样文本成为了一个直属于flexbox的文本节点。这就是两种情况。</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/6afe52e0e975484ca7eace18331c2e58.png"><img src="https://newbbs.bingyan.net/photo/2017/6afe52e0e975484ca7eace18331c2e58.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/6afe52e0e975484ca7eace18331c2e58.png" alt="img"></p>
 <p><strong>标签节点</strong>：子元素本身会 <em>成为</em> 一个flex-item容器<br><strong>文本节点</strong>：直接放置在flexbox下面的连续的文本节点会被 <em>装入</em> 一个隐形的flex-item中</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/8d55cc2843c99666d9f81b9db895a053.png"><img src="https://newbbs.bingyan.net/photo/2017/8d55cc2843c99666d9f81b9db895a053.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/8d55cc2843c99666d9f81b9db895a053.png" alt="img"></p>
 <p>存在浏览器差异。Edge上把用于代码缩进的Tab、空格放到文本节点里面去了，但是FF和Chrome忽略掉了它们。这种情况，目前还是避免为好（估计也没人会遇上这种情况）</p>
 <h3 id="将元素剔出文档流的属性：绝对定位、浮动"><a href="#将元素剔出文档流的属性：绝对定位、浮动" class="headerlink" title="将元素剔出文档流的属性：绝对定位、浮动"></a>将元素剔出文档流的属性：绝对定位、浮动</h3><table>
 <thead>
@@ -120,8 +612,7 @@
 <th>!</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>absolute</td>
 <td>很正常，和传统布局模式中的表现一样。<br>设置了position:absolute 的flex-item还是被剔出文档流了</td>
 </tr>
@@ -133,38 +624,37 @@
 <td>clear</td>
 <td>float都不管用了，要clear搞什么?</td>
 </tr>
-</tbody>
-</table>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/71c1000c7a4402921aa70d9cc54aa9e3.png"><img src="https://newbbs.bingyan.net/photo/2017/71c1000c7a4402921aa70d9cc54aa9e3.png" alt="img"></a></p>
+</tbody></table>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/71c1000c7a4402921aa70d9cc54aa9e3.png" alt="img"></p>
 <p>小插曲：</p>
 <p>【1】 网上的关于absolute的内容好啰嗦，不就是absolute作用效果仍然很正常么？</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/67d4f7a57f6af2ac08773de3aff49d1c.png"><img src="https://newbbs.bingyan.net/photo/2017/67d4f7a57f6af2ac08773de3aff49d1c.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/67d4f7a57f6af2ac08773de3aff49d1c.png" alt="img"></p>
 <h3 id="visibility-hidden-amp-transform"><a href="#visibility-hidden-amp-transform" class="headerlink" title="visibility: hidden &amp; transform"></a>visibility: hidden &amp; transform</h3><p>起始这一部分内容根本就不符合小标题“一些会对布局产生重大影响的属性”的题意。我就是为了再次强调一下： <strong>visibility和transform根本就不会对布局产生影响。</strong></p>
-<h1 id="指定的各种尺寸——现在表现得怎么样"><a href="#指定的各种尺寸——现在表现得怎么样" class="headerlink" title="指定的各种尺寸——现在表现得怎么样"></a>指定的各种尺寸——现在表现得怎么样</h1><p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/5face349b8c059ef15bddb6331ab9f3c.png"><img src="https://newbbs.bingyan.net/photo/2017/5face349b8c059ef15bddb6331ab9f3c.png" alt="img"></a></p>
-<h3 id="指定基准宽度：width-VS-Basis"><a href="#指定基准宽度：width-VS-Basis" class="headerlink" title="指定基准宽度：width VS. Basis"></a>指定基准宽度：width VS. Basis</h3><p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/921bedd20680fe4789b8b45ab153794c.png"><img src="https://newbbs.bingyan.net/photo/2017/921bedd20680fe4789b8b45ab153794c.png" alt="img"></a></p>
+<h1 id="指定的各种尺寸——现在表现得怎么样"><a href="#指定的各种尺寸——现在表现得怎么样" class="headerlink" title="指定的各种尺寸——现在表现得怎么样"></a>指定的各种尺寸——现在表现得怎么样</h1><p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/5face349b8c059ef15bddb6331ab9f3c.png" alt="img"></p>
+<h3 id="指定基准宽度：width-VS-Basis"><a href="#指定基准宽度：width-VS-Basis" class="headerlink" title="指定基准宽度：width VS. Basis"></a>指定基准宽度：width VS. Basis</h3><p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/921bedd20680fe4789b8b45ab153794c.png" alt="img"></p>
 <p>我们可以理解为basis优先级比width高，有basis就按照basis来指定宽度</p>
 <h4 id="【注意】basis独特行为：Basis-和内容自身宽度"><a href="#【注意】basis独特行为：Basis-和内容自身宽度" class="headerlink" title="【注意】basis独特行为：Basis 和内容自身宽度"></a>【注意】basis独特行为：Basis 和内容自身宽度</h4><p><strong>默认情况下</strong><br>width： 属性值调整到很小，内容会溢出以保证 框的宽度和属性值一致<br>basis： 属性值调整到很小，就算宽度到不了指定值也 不允许内容溢出<br><strong>但是，设置了 overflow:hidden 之后……</strong><br>两个都会把内容隐藏起来，宽度就是我们指定的宽度</p>
 <h4 id="【注意】flex-item宽度还是受到shrink和grow制约"><a href="#【注意】flex-item宽度还是受到shrink和grow制约" class="headerlink" title="【注意】flex-item宽度还是受到shrink和grow制约"></a>【注意】flex-item宽度还是受到shrink和grow制约</h4><p><strong>width/basis 不会影响 grow/shrink的行为</strong><br>试一试：把一个框的基础宽度调整到很大很大（width/basis都可以）而且不指定flex值，flex-item宽度还是弹性的。因为 “flex” 默认值是 flex: 0 1 auto;，不过我们指定的width/basis会覆盖第三个参数。<br>可见，即使我们设置了一个大的离谱的宽度，flex-shrink属性仍然运转的很好。<br>如果显式指定flex-shrink: 0; 框就不会被压缩了。<br>不妨像这样为一个框设置很小的基础宽度值，试试grow的作用吧。<br>总之，basis和width不是老大就是了。</p>
 <p><strong>Tips：</strong> flex接受两个简写属性值：none、auto，不过它们都不是flex的默认值。（有人掉坑了么）</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/3c220318e094bbb5812bdf8e89a6fcca.png"><img src="https://newbbs.bingyan.net/photo/2017/3c220318e094bbb5812bdf8e89a6fcca.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/3c220318e094bbb5812bdf8e89a6fcca.png" alt="img"></p>
 <h3 id="加上-min-width-和-max-width-看看"><a href="#加上-min-width-和-max-width-看看" class="headerlink" title="加上 min-width 和 max-width 看看"></a>加上 min-width 和 max-width 看看</h3><p>框宽度总是低不过min-width，高不过max-width，就算有basis/width、grow、shrink助攻也一样。</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/0f1720866bbd344e5cc4aad2696e8fe2.png"><img src="https://newbbs.bingyan.net/photo/2017/0f1720866bbd344e5cc4aad2696e8fe2.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/0f1720866bbd344e5cc4aad2696e8fe2.png" alt="img"></p>
 <p>Example：</p>
 <p>设置grow使第一个框伸展：没伸展过max-width值<br>设置shrink使第一个框收缩：没收缩低于min-width值<br>width、basis 也已经失效了</p>
 <h3 id="优先级顺序"><a href="#优先级顺序" class="headerlink" title="优先级顺序"></a>优先级顺序</h3><p>个人感觉这样的思考方式不严谨，但是有助于理解。</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/f419c9f8438a526f7c2cc5e550e910e0.png"><img src="https://newbbs.bingyan.net/photo/2017/f419c9f8438a526f7c2cc5e550e910e0.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/f419c9f8438a526f7c2cc5e550e910e0.png" alt="img"></p>
 <h1 id="grow、shrink作用下框宽度计算流程——比你想的麻烦一点"><a href="#grow、shrink作用下框宽度计算流程——比你想的麻烦一点" class="headerlink" title="grow、shrink作用下框宽度计算流程——比你想的麻烦一点"></a>grow、shrink作用下框宽度计算流程——比你想的麻烦一点</h1><p><strong>计算基础宽度的时候别忘了把margin算进去。</strong>下面截图里的参考线是针对此调校过的。</p>
 <h3 id="简单的grow"><a href="#简单的grow" class="headerlink" title="简单的grow"></a>简单的grow</h3><p>flex框剩余空间按照grow属性值计算权重，分到每个flex-item框<br>看看下面的例子。<br>三个框的grow分别为1、2、3，所以flex框的剩余空间分成6等份，按照权重分配。第一个框分到1份，第二个得到2份，第三个3份。</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/387e96728206dd8da45e472546a470c9.png"><img src="https://newbbs.bingyan.net/photo/2017/387e96728206dd8da45e472546a470c9.png" alt="img"></a></p>
-<p><img src="https://newbbs.bingyan.net/photo/2017/bfaa93cc99d13ef71bb3841a72938866.png" alt="img"></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/387e96728206dd8da45e472546a470c9.png" alt="img"></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/bfaa93cc99d13ef71bb3841a72938866.png" alt="img"></p>
 <h3 id="带有max-width的grow"><a href="#带有max-width的grow" class="headerlink" title="带有max-width的grow"></a>带有max-width的grow</h3><p>\1. 不管max-width先进行一次分配<br>\2. 分配后，统计那些算出的宽度超出max-width的框，去掉这些框的多余宽度<br>\3. 又出现了空余空间<br>\4. 对余出的剩余空间再分配给剩下的框<br>\5. 如此循环直到分配完成</p>
 <h3 id="比较复杂的shrink"><a href="#比较复杂的shrink" class="headerlink" title="比较复杂的shrink"></a>比较复杂的shrink</h3><p><strong>注意：flex-shrink 的计算流程和flex-grow的计算流程不同。</strong></p>
 <p>收缩权重 = (flex-item 基础宽度) × (flex-shrink值)<br><strong>【!】</strong>计算每个框的收缩权重时不再把shrink属性值直接拿来了</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/29457d3f7a05b387867951006f45af63.png"><img src="https://newbbs.bingyan.net/photo/2017/29457d3f7a05b387867951006f45af63.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/29457d3f7a05b387867951006f45af63.png" alt="img"></p>
 <p>带有min-width 的 shrink<br>\1. 不管min-width先进行一次分配<br>\2. 分配后，统计那些尺寸已经小于min-width的框，补上这些框欠缺的宽度<br>\3. 现在尺寸总和又超了<br>\4. 超标空间再分配给剩下的框<br>\5. 如此循环，直到所有的框都被塞进去</p>
 <h3 id="指定了flex-wrap-wrap-wrap-reserve"><a href="#指定了flex-wrap-wrap-wrap-reserve" class="headerlink" title="指定了flex-wrap: wrap / wrap-reserve"></a>指定了flex-wrap: wrap / wrap-reserve</h3><p>如果flex-item 的基础尺寸累加超过了flexbox 的尺寸就会另起一行进行排列<br>这就是nowrap和wrap/wrap-reserve的区别：一行不够了怎么办，压缩flex-item还是另起一行？<br>所以，对于flex-wrap:wrap/wrap-reserve来说，不会存在 shrink 的情况，而只有 grow 的情况”<br>当然了，要是一个flex-item实在太长，其基础宽度都超过flexbox本身的宽度了，那还是要看shrink来进行压缩的。也可以说：能换行就换行，真不行再压缩。</p>
 <p>下面盗图来说明</p>
-<p><a target="_blank" rel="noopener" href="https://newbbs.bingyan.net/photo/2017/25fc16266162d382054512641563cb3b.png"><img src="https://newbbs.bingyan.net/photo/2017/25fc16266162d382054512641563cb3b.png" alt="img"></a></p>
+<p><img src="/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/25fc16266162d382054512641563cb3b.png" alt="img"></p>
 <h1 id="FlexBox好用又方便！"><a href="#FlexBox好用又方便！" class="headerlink" title="FlexBox好用又方便！"></a>FlexBox好用又方便！</h1><p>写到这里了，就是这样 :-)</p>
 <p>=============</p>
 <p>【Demo】 (Link to GitHub)<br><a target="_blank" rel="noopener" href="http://github.com/xuxinhang/explore-flexbox-demo">http://github.com/xuxinhang/explore-flexbox-demo</a></p>
@@ -173,7 +663,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/" data-id="cklt0yx5v000ih4sse7e681xj" data-title="说不尽的FlexBox：深入探究" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2017/01/01/%E8%AF%B4%E4%B8%8D%E5%B0%BD%E7%9A%84FlexBox%EF%BC%9A%E6%B7%B1%E5%85%A5%E6%8E%A2%E7%A9%B6/" data-id="ckm7shed9000xhbq1bhn0etou" data-title="说不尽的FlexBox：深入探究" class="article-share-link">分享</a>
       
       
       
@@ -199,13 +689,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LaTeX/">LaTeX</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/" rel="tag">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/" rel="tag">HTTPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blend-mode/" rel="tag">blend mode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mask/" rel="tag">mask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag">密码学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%95%82%E7%A9%BA/" rel="tag">镂空</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/" rel="tag">Flex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTPS/" rel="tag">HTTPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/" rel="tag">LaTeX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/" rel="tag">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/V2Ray/" rel="tag">V2Ray</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/" rel="tag">Vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blend-mode/" rel="tag">blend mode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mask/" rel="tag">mask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" rel="tag">发布订阅</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag">密码学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%95%82%E7%A9%BA/" rel="tag">镂空</a></li></ul>
     </div>
   </div>
 
@@ -215,7 +712,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Context/" style="font-size: 10px;">Context</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/blend-mode/" style="font-size: 10px;">blend mode</a> <a href="/tags/mask/" style="font-size: 10px;">mask</a> <a href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" style="font-size: 10px;">发布订阅</a> <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 10px;">密码学</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发工具</a> <a href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%95%82%E7%A9%BA/" style="font-size: 10px;">镂空</a>
+      <a href="/tags/CSS/" style="font-size: 16.67px;">CSS</a> <a href="/tags/Context/" style="font-size: 10px;">Context</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/LaTeX/" style="font-size: 13.33px;">LaTeX</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/V2Ray/" style="font-size: 10px;">V2Ray</a> <a href="/tags/Vim/" style="font-size: 13.33px;">Vim</a> <a href="/tags/Webpack/" style="font-size: 10px;">Webpack</a> <a href="/tags/blend-mode/" style="font-size: 10px;">blend mode</a> <a href="/tags/mask/" style="font-size: 10px;">mask</a> <a href="/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" style="font-size: 10px;">发布订阅</a> <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" style="font-size: 10px;">密码学</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发工具</a> <a href="/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 10px;">科学上网</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E9%95%82%E7%A9%BA/" style="font-size: 10px;">镂空</a>
     </div>
   </div>
 
@@ -224,7 +721,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
     </div>
   </div>
 
@@ -237,23 +734,23 @@
       <ul>
         
           <li>
-            <a href="/2021/03/03/hello-world/">Hello World</a>
+            <a href="/2021/03/13/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/24/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%80%8E%E6%A0%B7%E6%95%B4%E7%90%86%E5%90%84%E5%BC%8F%E5%90%84%E6%A0%B7%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%96%87%E4%BB%B6%EF%BC%9F/">杂谈：怎样整理各式各样的个人文件？</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/28/%E6%80%8E%E6%A0%B7%E8%88%92%E9%80%82%E5%9C%B0%E4%BD%BF%E7%94%A8Vim%E7%A0%81%E5%AD%97%E5%86%99%E6%96%87%E7%AB%A0/">怎样舒适地使用 Vim 码字写文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/LaTeX%E5%85%A5%E9%97%A8%E5%B0%8F%E8%AE%B0%EF%BC%9AVim+Vimtex+LaTeX%E5%88%9D%E4%BD%93%E9%AA%8C/">LaTeX 入门小记：Vim + Vimtex + LaTeX 初体验</a>
           </li>
         
           <li>
             <a href="/2019/02/22/%E7%94%A8%E7%BA%AFCSS%E5%AE%9E%E7%8E%B0%E9%95%82%E7%A9%BA%E6%95%88%E6%9E%9C/">用纯 CSS 实现镂空效果</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/11/%E5%89%96%E6%9E%90-HTTPS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF/">剖析 HTTPS 的设计思路</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/18/Pro-Git-Reading-Note-Part-II/">Pro Git Reading Note Part II</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/18/Pro-Git-Reading-Note-Part-I/">Pro Git Reading Note Part I</a>
           </li>
         
       </ul>
